@@ -1,0 +1,4 @@
+user events - touch, hover
+
+system events - completion, data, error
+
