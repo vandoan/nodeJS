@@ -1,17 +1,24 @@
-
-
-
-// Create web server
+var router = require("./router.js");
 var http = require('http');
+
 http.createServer(function (request,response) {
-	homeRoute(request, response);
+	router.home(request, response);
+	router.user(request, response);
 }).listen(3000);
 
 console.log('Server running at http://localhost:3000');
 
-// Handle HTTP route GET / and POST / i.e. Home
-function homeRoute(request, response) {
-	// if url == "/" && GET
-	response.writeHead(200, {'Content-Type': 'text/plain'});
-	response.end("Hello world");
-}
+//Function that handles the reading of files and merge in value
+  // read from file and get a string
+    // merge values in to string
+
+
+
+
+
+
+
+
+
+
+

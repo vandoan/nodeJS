@@ -1,4 +1,4 @@
-var EventEmitter = require("events").EventEmitter;
+const EventEmitter = require("events").EventEmitter;
 var https = require("https");
 var http = require("http");
 var util = require("util");
@@ -16,13 +16,16 @@ function Profile(username) {
 
     //Connect to the API URL (https://teamtreehouse.com/username.json)
     var request = https.get("https://teamtreehouse.com/" + username + ".json", function(response) {
+                        console.log(username);
+
         var body = "";
 
-        if (response.statusCode !== 200) {
-            request.abort();
-            //Status Code Error
-            profileEmitter.emit("error", new Error("There was an error getting the profile for " + username + ". (" + http.STATUS_CODES[response.statusCode] + ")"));
-        }
+        // if (response.statusCode !== 200) {
+        //     console.log('test');
+        //     request.abort();
+        //     //Status Code Error
+        //     profileEmitter.emit("error", new Error("There was an error getting the profile for " + username + ". (" + http.STATUS_CODES[response.statusCode] + ")"));
+        // }
 
         //Read the data
         response.on('data', function (chunk) {
@@ -44,6 +47,7 @@ function Profile(username) {
             profileEmitter.emit("error", error);
         });
     });
+
 }
 
 util.inherits( Profile, EventEmitter );
