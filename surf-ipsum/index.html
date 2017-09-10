@@ -1,0 +1,57 @@
+
+<!DOCTYPE html>
+<body>
+<head>
+<link href="https://fonts.googleapis.com/css?family=Amatic+SC" rel="stylesheet">
+<style>
+ 	body {
+ 		font-family: 'Amatic SC', cursive;
+ 	}
+ 	a {
+    	color: #000;
+    	opacity: 0.8;
+	    text-decoration: none;
+	    transition: all .4s;
+ 	}
+ 	a:hover { opacity: 0.5; }
+ 	.header-view {
+ 		margin: 20px 0 40px;
+ 	}
+ 	.header-view a {
+ 		display: inline-block;
+ 	}
+ 	.header-view { 
+ 		text-align: center;
+ 	}
+ 	.diji {
+	    font-size: 1em;
+	    line-height: 8px;
+	    letter-spacing: 5px;
+ 	}
+ 	.diji span { font-size: 0.8em; }
+ 	.title {
+ 		font-size: 4em;
+	    letter-spacing: 0.1em;
+ 	}
+ 	#surf-ipsum {
+    	margin: auto;
+	    font-size: 18px;
+	    max-width: 700px;
+	    letter-spacing: 2.5px;
+ 	}
+</style>
+</head>
+<div class="main-view">
+	<div class="header-view">
+		<a href="/">
+			<div class="title">Surf Ipsum </div>
+			<div class="diji"><span>by</span> Diji workshop</div>
+		</a>
+	</div>
+	<div id="surf-ipsum"></div>
+</div>
+</body>
+
+<script src="public/jquery.3.2.1.js"></script>
+<script src="public/surf.js"></script>
+</html>
