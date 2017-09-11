@@ -3,9 +3,11 @@
 <body>
 <head>
 <link href="https://fonts.googleapis.com/css?family=Amatic+SC" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css?family=Amatic+SC|Annie+Use+Your+Telescope|Shadows+Into+Light" rel="stylesheet">
+
 <style>
  	body {
- 		font-family: 'Amatic SC', cursive;
+    	font-family: 'Annie Use Your Telescope', cursive;
  	}
  	a {
     	color: #000;
@@ -15,17 +17,23 @@
  	}
  	a:hover { opacity: 0.5; }
  	.header-view {
- 		margin: 20px 0 40px;
+ 		margin: 20px 0 20px;
  	}
+	p::first-letter {
+		text-transform: capitalize;
+	}
+	.main-view { margin-bottom: 80px; }
  	.header-view a {
  		display: inline-block;
  	}
  	.header-view { 
  		text-align: center;
- 	}
+		font-family: 'Amatic SC', cursive;
+	}
+	.header-view a { display: block; }
  	.diji {
 	    font-size: 1em;
-	    line-height: 8px;
+	    line-height: 36px;
 	    letter-spacing: 5px;
  	}
  	.diji span { font-size: 0.8em; }
@@ -36,18 +44,45 @@
  	#surf-ipsum {
     	margin: auto;
 	    font-size: 18px;
-	    max-width: 700px;
+	    max-width: 600px;
 	    letter-spacing: 2.5px;
  	}
+ 	.button-row {
+ 		width: 100%;
+ 		margin-bottom: 60px;
+ 	}
+ 	.button {
+	    margin: auto;
+ 		display: table;
+        font-size: 12px;
+	    padding: 1px 12px;
+	    text-align: center;
+	    transition: all .3s;
+	    letter-spacing: 2px;
+	    border: solid 1.1px rgba(0,0,0,.7);
+ 	}
+ 	.button:hover {
+ 		opacity: .6;
+ 	}
+ 	.boardImg {
+ 		width:68px;
+ 	}
+ 	span {
+  		display: unset;
+	}
+	span:first-letter {
+		text-transform: capitalize;
+	}
 </style>
 </head>
+<div>
+</div>
 <div class="main-view">
 	<div class="header-view">
-		<a href="/">
-			<div class="title">Surf Ipsum </div>
-			<div class="diji"><span>by</span> Diji workshop</div>
-		</a>
+		<a href="/surf-ipsum"><div class="title">Surf Ipsum </div><img class="boardImg" src="/public/board.png" /></a>
+		<a href="/"><div class="diji"><span>by</span> Diji workshop</div></a>
 	</div>
+	<div class="button-row"><div class="button"><a href="/">another one</a></div></div>
 	<div id="surf-ipsum"></div>
 </div>
 </body>
